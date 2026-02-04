@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Surprise</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Comic Sans MS', cursive;
+  }
+  #container {
+    text-align: center;
+  }
+  h1 {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 2px 2px 8px #ff66aa;
+    margin-bottom: 50px;
+  }
+  button {
+    font-size: 2em;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff66aa;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <h1>Adem, veux-tu être mon Valentin ? 💘</h1>
+  <button id="noBtn">Non 😅</button>
+</div>
+
+<script>
+  const noBtn = document.getElementById('noBtn');
+  noBtn.addEventListener('mouseover', () => {
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    noBtn.style.left = x + 'px';
+    noBtn.style.top = y + 'px';
+  });
+</script>
+</body>
+</html>
